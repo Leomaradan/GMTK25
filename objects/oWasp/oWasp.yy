@@ -8,6 +8,8 @@
   "name":"oWasp",
   "overriddenProperties":[
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oEnemy","path":"objects/oEnemy/oEnemy.yy",},"propertyId":{"name":"spd","path":"objects/oEnemy/oEnemy.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"10",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oEnemy","path":"objects/oEnemy/oEnemy.yy",},"propertyId":{"name":"spriteIdle","path":"objects/oEnemy/oEnemy.yy",},"resource":{"name":"sWaspIdle","path":"sprites/sWaspIdle/sWaspIdle.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"sWaspIdle",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oEnemy","path":"objects/oEnemy/oEnemy.yy",},"propertyId":{"name":"spriteMove","path":"objects/oEnemy/oEnemy.yy",},"resource":{"name":"sWaspFly","path":"sprites/sWaspFly/sWaspFly.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"sWaspFly",},
   ],
   "parent":{
     "name":"Objects",
@@ -35,8 +37,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sWasp",
-    "path":"sprites/sWasp/sWasp.yy",
+    "name":"sWaspIdle",
+    "path":"sprites/sWaspIdle/sWaspIdle.yy",
   },
   "spriteMaskId":null,
   "visible":true,

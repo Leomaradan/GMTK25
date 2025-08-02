@@ -1,4 +1,6 @@
-var inputDirection = point_direction(x, y, targetX, targetY);
+depth = -bbox_bottom;
+
+inputDirection = point_direction(x, y, targetX, targetY);
 // inputMagnitude = (_keyRight - _keyLeft != 0) || (_keyDown - _keyUp != 0);
 
 var hSpeed = lengthdir_x(spd, inputDirection);
@@ -6,10 +8,16 @@ var vSpeed = lengthdir_y(spd, inputDirection);
 
 if(hSpeed != 0) {
 	x += hSpeed;
+	moving = true;
 }
 
 if(vSpeed != 0) {
 	y += vSpeed;
+	moving = true;
+}
+
+if(moving) {
+    moveAngle = point_direction(0, 0, hSpeed, vSpeed);
 }
 
 x = floor(x);

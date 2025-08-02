@@ -21,7 +21,7 @@
         {"$GMRFlexPanel":"","%Name":"TimerBar","alignItems":2,"children":[
             {"$GMRSpriteGraphic":"v1","%Name":"graphic_70679936","animationSpeed":1.0,"colour":4294967295,"flexProperties":{"$InstanceFlexProps":"v1","anchor":0,"resourceType":"InstanceFlexProps","stretchHeight":true,"stretchWidth":true,},"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_70679936","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"spriteId":{"name":"sTimerBar","path":"sprites/sTimerBar/sTimerBar.yy",},"x":0.0,"y":0.0,},
           ],"flexDirection":0,"height":{"unit":1,"value":16.0,},"justifyContent":1,"name":"TimerBar","nodeColour":4282939634,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":2,"value":100.0,},},
-      ],"flexDirection":0,"gapRow":3.0,"gridX":32,"gridY":32,"justifyContent":0,"name":"UILayer_1","nodeColour":4294092360,"resourceType":"GMRUILayer","resourceVersion":"2.0",},
+      ],"flexDirection":0,"gapRow":3.0,"gridX":32,"gridY":32,"justifyContent":0,"name":"UILayer_1","nodeColour":4294092360,"paddingLeft":{"unit":1,"value":3.0,},"paddingRight":{"unit":1,"value":3.0,},"resourceType":"GMRUILayer","resourceVersion":"2.0",},
   ],
   "visible":true,
 }

@@ -8,6 +8,8 @@ moving = false;
 inputDirection = point_direction(0, 0, _keyRight - _keyLeft, _keyDown - _keyUp);
 inputMagnitude = (_keyRight - _keyLeft != 0) || (_keyDown - _keyUp != 0);
 
+
+
 var hSpeed = lengthdir_x(inputMagnitude * spd, inputDirection);
 var vSpeed = lengthdir_y(inputMagnitude * spd, inputDirection);
 
@@ -32,6 +34,16 @@ if(vSpeed != 0) {
 	y += vSpeed;
 	moving = true;
 }
+
+if(moving) {
+
+    moveAngle = point_direction(0, 0, hSpeed, vSpeed);
+	
+}
+
+addDebugVariable("moveAngle", moveAngle);
+addDebugVariable("moving", moving);
+addDebugVariable("spriteOffset", spriteOffset);
 
 var _camera = view_camera[0];
 //var _currentCameraWidth = camera_get_view_width(_camera);

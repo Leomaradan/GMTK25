@@ -5,7 +5,7 @@
   "managed":true,
   "name":"oFlower",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oBonus","path":"objects/oBonus/oBonus.yy",},"propertyId":{"name":"disabledSprite","path":"objects/oBonus/oBonus.yy",},"resource":{"name":"sFlower","path":"sprites/sFlower/sFlower.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"sFlower",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oBonus","path":"objects/oBonus/oBonus.yy",},"propertyId":{"name":"disabledSprite","path":"objects/oBonus/oBonus.yy",},"resource":{"name":"sFlowerEmpty","path":"sprites/sFlowerEmpty/sFlowerEmpty.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"sFlowerEmpty",},
   ],
   "parent":{
     "name":"Objects",
@@ -33,9 +33,12 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sFlowerActive",
-    "path":"sprites/sFlowerActive/sFlowerActive.yy",
+    "name":"sFlowerReady",
+    "path":"sprites/sFlowerReady/sFlowerReady.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"sFlowerMask",
+    "path":"sprites/sFlowerMask/sFlowerMask.yy",
+  },
   "visible":true,
 }

@@ -25,9 +25,16 @@ cameraHeight = camera_get_view_height(view_camera[0]);
 currentCameraWidth = cameraWidth;
 currentCameraHeight = cameraHeight;
 
+moveAngle = 0;
+
 inputDirection = 0;
 inputMagnitude = 0;
 
+sprites = [sCaterpillarIdle, sCaterpillarMove];
+spriteOffset = -90;
+spriteRotate = true;
+
 initializeLevel();
 createInstances(state);
+createBird(state);
 spawnObjects(x, y, cameraWidth, cameraHeight, state);

@@ -1,4 +1,18 @@
-draw_self();
+// draw_self();
+if(spriteRotate) {
+	if(moving) {
+		draw_sprite_ext(sprites[1], image_index, x, y, 1, 1, moveAngle + spriteOffset, c_white, 1)	
+	} else {
+		draw_sprite_ext(sprites[0], image_index, x, y, 1, 1, moveAngle + spriteOffset, c_white, 1)	
+	}
+	
+} else {
+	if(moving) {
+		draw_sprite_ext(sprites[1], image_index, x, y, 1, 1, 0, c_white, 1)	
+	} else {
+		draw_sprite_ext(sprites[0], image_index, x, y, 1, 1, 0, c_white, 1)	
+	}
+}
 
 // draw_sprite_stretched(sprite_index, image_index, x, y, 64, 64);
 

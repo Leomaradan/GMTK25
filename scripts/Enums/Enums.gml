@@ -1,9 +1,13 @@
 #macro DEBUG true
 #macro FPS 60
-#macro WIDTH_BUTTERFLY 800
-#macro WIDTH_CATERPILLAR 600
-#macro HEIGHT_BUTTERFLY 600
-#macro HEIGHT_CATERPILLAR 400
+
+#macro ROOM_SIZE 8000
+
+#macro WIDTH_BUTTERFLY 1800
+#macro WIDTH_CATERPILLAR 1200
+
+#macro HEIGHT_BUTTERFLY 1200
+#macro HEIGHT_CATERPILLAR 800
 
 #macro TIMER_PHASE 30 * FPS
 #macro TIMER_INTERPHASE 5 * FPS
@@ -14,6 +18,10 @@
 #macro SPEED_CATERPILLAR 5
 #macro SPEED_BUTTERFLY 10
 #macro SPEED_BUTTERFLY_EGGS 9
+
+#macro LAYER_ENEMY "Enemy"
+#macro LAYER_PLAYER "Player"
+#macro LAYER_BONUS "Bonus"
 
 enum PlayerState {
 	CATERPILLAR = 0,
@@ -33,6 +41,20 @@ enum GameplayState {
 	COCOON = 1,
 	BUTTERFLY = 2,
 	EGGS = 3
+}
+
+enum Side {
+	NORTH = 0,
+	WEST = 1,
+	EAST = 2,
+	SOUTH = 3
+}
+
+enum BirdState {
+	NOT_STARTED,
+	STARTED,
+	IN_ROOM,
+	ENDED,
 }
 
 function getGameplayState(_playerState) {

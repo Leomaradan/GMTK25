@@ -95,7 +95,11 @@ function changeState(newState, reason) {
 				maxLife = LIFE_BUTTERFLY;
 				currentCameraHeight = cameraHeight;
 				currentCameraWidth = cameraWidth;
-				sprite_index = sPlayerButterfly;
+				//sprite_index = sPlayerButterfly;
+				sprites = [sButterflyIdle, sButterflyMove];
+				spriteOffset = 0;
+				spriteRotate = true;
+				createBird(newState);
 				
 				
 				break;
@@ -126,8 +130,11 @@ function changeState(newState, reason) {
 				energy = 0;
 				life = LIFE_CATERPILLAR;
 				maxLife = LIFE_CATERPILLAR;
-				sprite_index = sPlayerCaterpilarHorizontal;
-				
+				// sprite_index = sPlayerCaterpilarHorizontal;
+				sprites = [sCaterpillarIdle, sCaterpillarMove];
+				spriteOffset = -90;
+				spriteRotate = true;
+				createBird(newState);
 				break;	
 				
 			case PlayerState.COCOON:
@@ -140,7 +147,10 @@ function changeState(newState, reason) {
 				maxLife = LIFE_CATERPILLAR;
 				cameraWidth = WIDTH_BUTTERFLY;
 				cameraHeight = HEIGHT_BUTTERFLY;
-				sprite_index = sPlayerCocoon;
+				// sprite_index = sPlayerCocoon;
+				sprites = [sPlayerCocoon, sPlayerCocoon];
+				spriteOffset = 0;
+				spriteRotate = false;
 				// instance_destroy(oBonus);
 				
 				
@@ -169,13 +179,18 @@ function changeState(newState, reason) {
 				maxLife = LIFE_CATERPILLAR;
 				cameraWidth = WIDTH_CATERPILLAR;
 				cameraHeight = HEIGHT_CATERPILLAR;				
-				sprite_index = sPlayerEggs;
+				// sprite_index = sPlayerEggs;
+				sprites = [sPlayerEggs, sPlayerEggs];
+				spriteOffset = 0;
+				spriteRotate = false;				
 				// instance_destroy(oBonus);
 		
 				
 				break;					
 				
 		}
+		
+		sprite_index = sprites[0];
 		
 		state = newState;
 	}	
@@ -200,7 +215,7 @@ function spawnOtherButterfly() {
 	var _x = random_range(_zoneX1, _zoneX2);
 	var _y = random_range(_zoneY1, _zoneY2);
 	
-	instance_create_layer(_x, _y, "Instances", oButterflyReproduction);
+	instance_create_layer(_x, _y, LAYER_PLAYER, oButterflyReproduction);
 	
 
 }
