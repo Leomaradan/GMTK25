@@ -1,0 +1,1 @@
+oPlayer.life = 0;
