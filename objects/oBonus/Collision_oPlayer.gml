@@ -3,6 +3,11 @@ if(used) {
 }
 
 oPlayer.energy += (energyRefill * FPS);
+oGame.gameScore += energyRefill;
+
+if(sfx != noone) {
+	audio_play_sound(sfx, 10, false);
+}
 
 if(disabledSprite) {
 	used = true;

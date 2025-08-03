@@ -24,6 +24,8 @@ addDebugVariable("_lifePercent", _lifePercent);
 addDebugVariable("_energyPercent", _energyPercent);
 addDebugVariable("_timerPercent", _timerPercent);
 
+
+
 // show_debug_message({_lifePercent, _energyPercent, _timerPercent});
 
 

@@ -1,0 +1,2 @@
+hideBars();
+gameScore = 0;

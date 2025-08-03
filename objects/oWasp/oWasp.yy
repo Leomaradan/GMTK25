@@ -3,6 +3,7 @@
   "%Name":"oWasp",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":1,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":2,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"oWasp",
@@ -10,6 +11,9 @@
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oEnemy","path":"objects/oEnemy/oEnemy.yy",},"propertyId":{"name":"spd","path":"objects/oEnemy/oEnemy.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"10",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oEnemy","path":"objects/oEnemy/oEnemy.yy",},"propertyId":{"name":"spriteIdle","path":"objects/oEnemy/oEnemy.yy",},"resource":{"name":"sWaspIdle","path":"sprites/sWaspIdle/sWaspIdle.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"sWaspIdle",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oEnemy","path":"objects/oEnemy/oEnemy.yy",},"propertyId":{"name":"spriteMove","path":"objects/oEnemy/oEnemy.yy",},"resource":{"name":"sWaspFly","path":"sprites/sWaspFly/sWaspFly.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"sWaspFly",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oEnemy","path":"objects/oEnemy/oEnemy.yy",},"propertyId":{"name":"spriteShadow","path":"objects/oEnemy/oEnemy.yy",},"resource":{"name":"sWaspShadow","path":"sprites/sWaspShadow/sWaspShadow.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"sWaspShadow",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oEnemy","path":"objects/oEnemy/oEnemy.yy",},"propertyId":{"name":"useCollisions","path":"objects/oEnemy/oEnemy.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"True",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oEnemy","path":"objects/oEnemy/oEnemy.yy",},"propertyId":{"name":"sfx","path":"objects/oEnemy/oEnemy.yy",},"resource":{"name":"sfxWasp","path":"sounds/sfxWasp/sfxWasp.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"sfxWasp",},
   ],
   "parent":{
     "name":"Objects",
@@ -40,6 +44,9 @@
     "name":"sWaspIdle",
     "path":"sprites/sWaspIdle/sWaspIdle.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"sWaspIdle",
+    "path":"sprites/sWaspIdle/sWaspIdle.yy",
+  },
   "visible":true,
 }

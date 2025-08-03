@@ -9,6 +9,7 @@
   "overriddenProperties":[
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oBonus","path":"objects/oBonus/oBonus.yy",},"propertyId":{"name":"energyRefill","path":"objects/oBonus/oBonus.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"40",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oBonus","path":"objects/oBonus/oBonus.yy",},"propertyId":{"name":"disabledSprite","path":"objects/oBonus/oBonus.yy",},"resource":{"name":"sFlowerEmpty","path":"sprites/sFlowerEmpty/sFlowerEmpty.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"sFlowerEmpty",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oBonus","path":"objects/oBonus/oBonus.yy",},"propertyId":{"name":"spriteShadow","path":"objects/oBonus/oBonus.yy",},"resource":{"name":"sLargeShadow","path":"sprites/sLargeShadow/sLargeShadow.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"sLargeShadow",},
   ],
   "parent":{
     "name":"Objects",

@@ -1,1 +1,1 @@
-depth = -bbox_bottom;
+depth = depthstart - bbox_bottom;

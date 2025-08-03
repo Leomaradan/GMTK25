@@ -96,18 +96,20 @@ function changeState(newState, reason) {
 				currentCameraHeight = cameraHeight;
 				currentCameraWidth = cameraWidth;
 				//sprite_index = sPlayerButterfly;
-				sprites = [sButterflyIdle, sButterflyMove];
+				sprites = [sButterflyIdle, sButterflyMove, sButterflyShadow, 60];
 				spriteOffset = 0;
 				spriteRotate = true;
-				createBird(newState);
+				oGame.gameScore += (TIMER_INTERPHASE / FPS);
+				audio_play_sound(sfxReproduce, 1, false);
+				setupBirds(newState);
 				
 				
 				break;
 				
 			case PlayerState.BUTTERFLY_REPRO:
 				removeLife = true;
-				timer = TIMER_INTERPHASE;
-				maxTimer = TIMER_INTERPHASE;
+				timer = TIMER_REPRODUCTION;
+				maxTimer = TIMER_REPRODUCTION;
 				spawnOtherButterfly();
 				
 				break;	
@@ -131,10 +133,12 @@ function changeState(newState, reason) {
 				life = LIFE_CATERPILLAR;
 				maxLife = LIFE_CATERPILLAR;
 				// sprite_index = sPlayerCaterpilarHorizontal;
-				sprites = [sCaterpillarIdle, sCaterpillarMove];
+				sprites = [sCaterpillarIdle, sCaterpillarMove, sCaterpillarShadow, 15];
 				spriteOffset = -90;
 				spriteRotate = true;
-				createBird(newState);
+				oGame.gameScore += (TIMER_INTERPHASE / FPS);
+				setupBirds(newState);
+				audio_play_sound(sfxReproduce, 1, false);
 				break;	
 				
 			case PlayerState.COCOON:
@@ -148,11 +152,12 @@ function changeState(newState, reason) {
 				cameraWidth = WIDTH_BUTTERFLY;
 				cameraHeight = HEIGHT_BUTTERFLY;
 				// sprite_index = sPlayerCocoon;
-				sprites = [sPlayerCocoon, sPlayerCocoon];
+				sprites = [sPlayerCocoon, sPlayerCocoon, noone];
 				spriteOffset = 0;
 				spriteRotate = false;
 				// instance_destroy(oBonus);
-				
+				oGame.gameScore += (LIFE_CATERPILLAR / FPS);
+				audio_play_sound(sfxReproduce, 1, false);
 				
 				break;			
 				
@@ -160,12 +165,26 @@ function changeState(newState, reason) {
 			case PlayerState.DEATH_CATERPILLAR:
 			case PlayerState.DEATH_COCOON:
 			case PlayerState.DEATH_EGGS:
-				removeLife = false;
-				spd = 0;
-				timer = -1;
-				maxTimer = 0;
-				energy = 0;
-				dead = true;
+			
+				audio_play_sound(sfxDeath, 10, false);
+				instance_activate_all();
+				instance_destroy(oWasp);
+				instance_destroy(oBeetle);
+				instance_destroy(oBird);
+				instance_destroy(oLeaf);
+				instance_destroy(oFlower);
+				instance_destroy(oFlowerSpider);
+				instance_destroy(oButterflyReproduction);
+				instance_destroy(oLeafProtection);
+				
+				// oGame.gameScore += (energy * FPS);
+				room_goto_next();
+				// removeLife = false;
+				// spd = 0;
+				// timer = -1;
+				// maxTimer = 0;
+				// energy = 0;
+				// dead = true;
 				
 				break;			
 				
@@ -180,10 +199,12 @@ function changeState(newState, reason) {
 				cameraWidth = WIDTH_CATERPILLAR;
 				cameraHeight = HEIGHT_CATERPILLAR;				
 				// sprite_index = sPlayerEggs;
-				sprites = [sPlayerEggs, sPlayerEggs];
+				sprites = [sPlayerEggs, sPlayerEggs, noone];
 				spriteOffset = 0;
 				spriteRotate = false;				
 				// instance_destroy(oBonus);
+				oGame.gameScore += (LIFE_BUTTERFLY / FPS);
+				audio_play_sound(sfxReproduce, 1, false);
 		
 				
 				break;					

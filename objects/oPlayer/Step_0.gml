@@ -26,14 +26,16 @@ var vSpeed = lengthdir_y(inputMagnitude * spd, inputDirection);
 });*/
 
 if(hSpeed != 0) {
-	x += hSpeed;
+	//x += hSpeed;
 	moving = true;
 }
 
 if(vSpeed != 0) {
-	y += vSpeed;
+	//y += vSpeed;
 	moving = true;
 }
+
+move_and_collide(hSpeed, vSpeed, collisionMap);
 
 if(moving) {
 
@@ -55,7 +57,7 @@ if(currentCameraWidth != cameraWidth || currentCameraHeight != cameraHeight) {
 		var _newWidth = lerp(currentCameraWidth, cameraWidth,  _percent);	
 		var _newHeight = lerp(currentCameraHeight, cameraHeight,  _percent);	
 		
-		show_debug_message({
+		/*show_debug_message({
 			_newWidth,
 			_newHeight, 
 			currentCameraWidth,  
@@ -64,7 +66,7 @@ if(currentCameraWidth != cameraWidth || currentCameraHeight != cameraHeight) {
 			cameraHeight, 
 			timer,
 			_percent
-		});
+		});*/
 		
 		camera_set_view_size(_camera, _newWidth, _newHeight);
 		camera_set_view_border(_camera, _newWidth * 0.5, _newHeight * 0.5);
@@ -75,3 +77,5 @@ if(currentCameraWidth != cameraWidth || currentCameraHeight != cameraHeight) {
 		currentCameraWidth = cameraWidth;
 	}
 }
+
+audio_listener_position(x, y, 0);

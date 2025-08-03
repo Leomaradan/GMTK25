@@ -2,7 +2,8 @@ var _distanceToPlayer = distance_to_object(oPlayer);
 
 cooldown--;
 
-if(_distanceToPlayer < 512 && oPlayer.moving) {
+
+if(_distanceToPlayer < 512 && oPlayer.moving && !place_meeting(oPlayer.x, oPlayer.y, oLeafProtection)) {
 	targetX = oPlayer.x;
 	targetY = oPlayer.y;
 	cooldown = 0;

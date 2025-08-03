@@ -19,7 +19,7 @@ function showDebugGUI(element, index)
 	var _text = _name + ": " + string(_value);
 	
 	// Calculate the vertical position, to not overlapping other texts
-	var _position = _y + (index * 10) + 24;
+	var _position = _y + (index * 30) + 50;
 	
 	// Ensuring the color and font here
 	draw_set_color(c_white);

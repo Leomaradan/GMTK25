@@ -6,6 +6,8 @@
 // 4 = butterfly 2
 // 5 = death/eggs
 
+audio_listener_orientation(0,1,0,0,0,1);
+
 spd = 5;
 maxEnergy = 100 * FPS;
 state = PlayerState.CATERPILLAR;
@@ -30,11 +32,10 @@ moveAngle = 0;
 inputDirection = 0;
 inputMagnitude = 0;
 
-sprites = [sCaterpillarIdle, sCaterpillarMove];
+sprites = [sCaterpillarIdle, sCaterpillarMove, sCaterpillarShadow, 15];
 spriteOffset = -90;
 spriteRotate = true;
 
-initializeLevel();
-createInstances(state);
-createBird(state);
-spawnObjects(x, y, cameraWidth, cameraHeight, state);
+collisionMap = layer_tilemap_get_id(layer_get_id(LAYER_COLLISIONS));
+
+

@@ -1,6 +1,6 @@
-// switch state if condition are validated
 if(dead) {
-	return; // Early return	
+	noLifeLeft();
+	return; 
 }
 
 if(!instance_exists(oGame)) {
@@ -12,6 +12,7 @@ addDebugVariable("state", getPlayerStateName(state));
 addDebugVariable("life", life);
 addDebugVariable("energy", energy);
 addDebugVariable("timer", timer);
+addDebugVariable("instances", instance_number(oEnemy));
 
 if(removeLife) {
 	life--;

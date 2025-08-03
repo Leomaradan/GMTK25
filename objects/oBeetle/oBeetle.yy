@@ -3,6 +3,8 @@
   "%Name":"oBeetle",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":1,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":76,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":2,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"oBeetle",
@@ -10,6 +12,9 @@
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oEnemy","path":"objects/oEnemy/oEnemy.yy",},"propertyId":{"name":"spd","path":"objects/oEnemy/oEnemy.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"4",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oEnemy","path":"objects/oEnemy/oEnemy.yy",},"propertyId":{"name":"spriteIdle","path":"objects/oEnemy/oEnemy.yy",},"resource":{"name":"sBlackBeetleIdle","path":"sprites/sBlackBeetleIdle/sBlackBeetleIdle.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"sBlackBeetleIdle",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oEnemy","path":"objects/oEnemy/oEnemy.yy",},"propertyId":{"name":"spriteMove","path":"objects/oEnemy/oEnemy.yy",},"resource":{"name":"sBlackBeetleMove","path":"sprites/sBlackBeetleMove/sBlackBeetleMove.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"sBlackBeetleMove",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oEnemy","path":"objects/oEnemy/oEnemy.yy",},"propertyId":{"name":"spriteShadow","path":"objects/oEnemy/oEnemy.yy",},"resource":{"name":"sBeetleShadow","path":"sprites/sBeetleShadow/sBeetleShadow.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"sBeetleShadow",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oEnemy","path":"objects/oEnemy/oEnemy.yy",},"propertyId":{"name":"spriteShadowOffset","path":"objects/oEnemy/oEnemy.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"32",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oEnemy","path":"objects/oEnemy/oEnemy.yy",},"propertyId":{"name":"useCollisions","path":"objects/oEnemy/oEnemy.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"True",},
   ],
   "parent":{
     "name":"Objects",
@@ -40,6 +45,9 @@
     "name":"sBlackBeetleIdle",
     "path":"sprites/sBlackBeetleIdle/sBlackBeetleIdle.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"sBlackBeetleIdle",
+    "path":"sprites/sBlackBeetleIdle/sBlackBeetleIdle.yy",
+  },
   "visible":true,
 }

@@ -1,4 +1,9 @@
 // draw_self();
+
+if(sprites[2] != noone) {
+	draw_sprite_ext(sprites[2], image_index, x, y + sprites[3], 1, 1, moveAngle + spriteOffset, c_white, 1)	
+}
+
 if(spriteRotate) {
 	if(moving) {
 		draw_sprite_ext(sprites[1], image_index, x, y, 1, 1, moveAngle + spriteOffset, c_white, 1)	

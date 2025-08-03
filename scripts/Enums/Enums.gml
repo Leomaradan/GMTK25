@@ -11,17 +11,22 @@
 
 #macro TIMER_PHASE 30 * FPS
 #macro TIMER_INTERPHASE 5 * FPS
+#macro TIMER_REPRODUCTION 10 * FPS
 
-#macro LIFE_BUTTERFLY 65 * FPS
+#macro LIFE_BUTTERFLY 70 * FPS
 #macro LIFE_CATERPILLAR 30 * FPS
 
 #macro SPEED_CATERPILLAR 5
 #macro SPEED_BUTTERFLY 10
 #macro SPEED_BUTTERFLY_EGGS 9
 
+#macro BIRDS_COUNT 10
+
 #macro LAYER_ENEMY "Enemy"
+#macro LAYER_LEAF_PROTECTION "LeafProtection"
 #macro LAYER_PLAYER "Player"
 #macro LAYER_BONUS "Bonus"
+#macro LAYER_COLLISIONS "Collisions"
 
 enum PlayerState {
 	CATERPILLAR = 0,

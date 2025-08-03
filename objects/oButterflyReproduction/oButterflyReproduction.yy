@@ -3,6 +3,7 @@
   "%Name":"oButterflyReproduction",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"oButterflyReproduction",
@@ -30,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sPlayerButterfly",
-    "path":"sprites/sPlayerButterfly/sPlayerButterfly.yy",
+    "name":"sButterflyIdle",
+    "path":"sprites/sButterflyIdle/sButterflyIdle.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -1,11 +1,16 @@
 {
   "$GMObject":"",
   "%Name":"oLeaf",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"oLeaf",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oBonus","path":"objects/oBonus/oBonus.yy",},"propertyId":{"name":"energyRefill","path":"objects/oBonus/oBonus.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"40",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oBonus","path":"objects/oBonus/oBonus.yy",},"propertyId":{"name":"energyRefill","path":"objects/oBonus/oBonus.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"20",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oBonus","path":"objects/oBonus/oBonus.yy",},"propertyId":{"name":"spriteShadow","path":"objects/oBonus/oBonus.yy",},"resource":{"name":"sLeafShadow","path":"sprites/sLeafShadow/sLeafShadow.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"sLeafShadow",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oBonus","path":"objects/oBonus/oBonus.yy",},"propertyId":{"name":"spriteShadowOffset","path":"objects/oBonus/oBonus.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"5",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oBonus","path":"objects/oBonus/oBonus.yy",},"propertyId":{"name":"sfx","path":"objects/oBonus/oBonus.yy",},"resource":{"name":"sfxEat","path":"sounds/sfxEat/sfxEat.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"sfxEat",},
   ],
   "parent":{
     "name":"Objects",
