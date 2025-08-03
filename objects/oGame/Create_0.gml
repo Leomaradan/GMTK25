@@ -2,6 +2,7 @@ randomize();
 
 frame = 1;
 gameScore = 0;
+gameOverText = "";
 
 // room_set_camera(rLevel, 0, 0);
 

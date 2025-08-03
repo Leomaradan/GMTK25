@@ -14,6 +14,7 @@
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oEnemy","path":"objects/oEnemy/oEnemy.yy",},"propertyId":{"name":"spriteShadow","path":"objects/oEnemy/oEnemy.yy",},"resource":{"name":"sWaspShadow","path":"sprites/sWaspShadow/sWaspShadow.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"sWaspShadow",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oEnemy","path":"objects/oEnemy/oEnemy.yy",},"propertyId":{"name":"useCollisions","path":"objects/oEnemy/oEnemy.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"True",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oEnemy","path":"objects/oEnemy/oEnemy.yy",},"propertyId":{"name":"sfx","path":"objects/oEnemy/oEnemy.yy",},"resource":{"name":"sfxWasp","path":"sounds/sfxWasp/sfxWasp.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"sfxWasp",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oEnemy","path":"objects/oEnemy/oEnemy.yy",},"propertyId":{"name":"deathMessage","path":"objects/oEnemy/oEnemy.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"\"A wasp sting you!\"",},
   ],
   "parent":{
     "name":"Entities",

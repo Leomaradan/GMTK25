@@ -1,6 +1,7 @@
 function noLifeLeft() {
 	with(oPlayer) {
 		var reason = "no life";
+
 		switch(state) {
 			case PlayerState.BUTTERFLY_1:			
 			case PlayerState.BUTTERFLY_2:			
@@ -31,7 +32,13 @@ function hasMaxEnergy() {
 		var reason = "max energy";
 		switch(state) {
 			case PlayerState.BUTTERFLY_2:	
-				changeState(PlayerState.EGGS, reason);
+				if(reproduction) {
+					changeState(PlayerState.EGGS, reason);
+				} else {
+					dead = true;
+					oGame.gameOverText = "You forget to mate";	
+					changeState(PlayerState.DEATH_BUTTERFLY, reason);
+				}
 				break;				
 			case PlayerState.CATERPILLAR:			
 				changeState(PlayerState.COCOON, reason);
@@ -57,11 +64,11 @@ function timerEnded() {
 				
 			case PlayerState.BUTTERFLY_REPRO:		
 				// summon other butterfly
-				if(!reproduction) {
-					changeState(PlayerState.DEATH_BUTTERFLY, reason)
-				} else {
-					changeState(PlayerState.BUTTERFLY_2, reason)
-				}
+				//if(!reproduction) {
+				//	changeState(PlayerState.DEATH_BUTTERFLY, reason)
+				//} else {
+				changeState(PlayerState.BUTTERFLY_2, reason)
+				//}
 
 				break;						
 			case PlayerState.COCOON:			

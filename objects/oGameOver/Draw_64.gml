@@ -1,6 +1,7 @@
 
 
-drawTitle("Game Over");
+drawTitle("Game Over", 0.25);
+drawText(oGame.gameOverText, 0.5, true, true);
 drawText(text, 0.75);
 
 if(cooldown == 0) {

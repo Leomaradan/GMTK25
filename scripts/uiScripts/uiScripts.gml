@@ -32,8 +32,8 @@ function drawTitle(_text, _height = 0.5, _shadow = true) {
 	_drawText(fTitle, _text, room_width * 0.5, room_height * _height, _shadow, 5);	
 }
 
-function drawText(_text, _height = 0.5, _shadow = true) {
-	_drawText(fText, _text, room_width * 0.5, room_height * _height, _shadow, 3);	
+function drawText(_text, _height = 0.5, _shadow = true, _outline = false) {
+	_drawText(fText, _text, room_width * 0.5, room_height * _height, _shadow, 3, _outline);	
 }
 
 function drawTextCorner(_text, _shadow = true) {
@@ -71,7 +71,7 @@ function drawTextCorner(_text, _shadow = true) {
 }
 
 
-function _drawText(_font, _text, _width, _height, _shadow, _shadowDistance) {
+function _drawText(_font, _text, _width, _height, _shadow, _shadowDistance, _outline = false) {
 	draw_set_font(_font);
 	draw_set_halign(fa_center);
 	draw_set_valign(fa_middle);
@@ -84,6 +84,16 @@ function _drawText(_font, _text, _width, _height, _shadow, _shadowDistance) {
 		draw_set_alpha(1);
 	}
 	
+
+	
+	if(_outline) {
+	    draw_set_colour(c_black);
+	    draw_text(_width-2,_height-2,_text);
+	    draw_text(_width-2,_height+2,_text);
+	    draw_text(_width+2,_height+2,_text);
+	    draw_text(_width+2,_height-2,_text);
+	}
+
 	draw_set_color(c_white);
 
 	draw_text(_width, _height, _text);	

@@ -37,6 +37,7 @@ var _isTimeout = timer == 0;
 var _isMaxEnergy = energy >= maxEnergy;
 
 if(_isDead) {
+	oGame.gameOverText = "You run out of life";	
 	noLifeLeft();	
 } else if(_isTimeout) {
 	timerEnded();

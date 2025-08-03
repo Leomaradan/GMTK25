@@ -1,1 +1,2 @@
-oPlayer.life = 0;
+oPlayer.dead = true;
+oGame.gameOverText = "A spider catch you!"

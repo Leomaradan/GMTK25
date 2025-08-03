@@ -39,6 +39,7 @@
     {"$GMObjectProperty":"v1","%Name":"spriteShadowOffset","filters":[],"listItems":[],"multiselect":false,"name":"spriteShadowOffset","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
     {"$GMObjectProperty":"v1","%Name":"useCollisions","filters":[],"listItems":[],"multiselect":false,"name":"useCollisions","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
     {"$GMObjectProperty":"v1","%Name":"sfx","filters":[],"listItems":[],"multiselect":false,"name":"sfx","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":5,},
+    {"$GMObjectProperty":"v1","%Name":"deathMessage","filters":[],"listItems":[],"multiselect":false,"name":"deathMessage","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"\"\"","varType":2,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
