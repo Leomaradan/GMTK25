@@ -9,8 +9,8 @@
   "name":"oLeafProtection",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"GroundElements",
+    "path":"folders/Objects/GroundElements.yy",
   },
   "parentObjectId":null,
   "persistent":false,

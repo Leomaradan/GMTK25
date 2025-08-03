@@ -96,7 +96,7 @@ function changeState(newState, reason) {
 				currentCameraHeight = cameraHeight;
 				currentCameraWidth = cameraWidth;
 				//sprite_index = sPlayerButterfly;
-				sprites = [sButterflyIdle, sButterflyMove, sButterflyShadow, 60];
+				sprites = [sButterflyIdle, sButterflyMove, sButterflyShadow, 240];
 				spriteOffset = 0;
 				spriteRotate = true;
 				oGame.gameScore += (TIMER_INTERPHASE / FPS);

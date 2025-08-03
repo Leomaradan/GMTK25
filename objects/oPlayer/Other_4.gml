@@ -1,4 +1,5 @@
 displayBars();
+oGame.gameScore = 0;
 
 var _placed = false;
 

@@ -1,4 +1,4 @@
-#macro DEBUG true
+#macro DEBUG false
 #macro FPS 60
 
 #macro ROOM_SIZE 8000

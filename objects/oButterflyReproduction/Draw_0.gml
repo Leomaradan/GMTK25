@@ -2,7 +2,7 @@ draw_sprite_ext(
 	sButterflyShadow, 
 	image_index, 
 	floor(x), 
-	floor(y + 25), 
+	floor(y + 240), 
 	1, 
 	1, 
 	image_angle,

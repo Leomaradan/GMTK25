@@ -38,8 +38,19 @@ function drawText(_text, _height = 0.5, _shadow = true) {
 
 function drawTextCorner(_text, _shadow = true) {
 	
-	var _width = display_get_gui_width() - 15;
-	var _height = display_get_gui_height() - 15;
+	var _width =  window_get_width() - 15;
+	var _height = window_get_height() - 15;
+	
+	//var _widthGUI =  display_get_gui_width();
+	//var _heightGUI = display_get_gui_height();	
+	
+	//var _widthDevice = display_get_width();
+	//var _heightDevice = display_get_height();
+	
+	//var _widthWindow = window_get_width();
+	//var _heightWindow = window_get_height();
+	
+
 	
 	draw_set_font(fText);
 	draw_set_halign(fa_right);

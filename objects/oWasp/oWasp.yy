@@ -16,8 +16,8 @@
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oEnemy","path":"objects/oEnemy/oEnemy.yy",},"propertyId":{"name":"sfx","path":"objects/oEnemy/oEnemy.yy",},"resource":{"name":"sfxWasp","path":"sounds/sfxWasp/sfxWasp.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"sfxWasp",},
   ],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Entities",
+    "path":"folders/Objects/Entities.yy",
   },
   "parentObjectId":{
     "name":"oEnemy",

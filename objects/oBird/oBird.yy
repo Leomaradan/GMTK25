@@ -15,8 +15,8 @@
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oEnemy","path":"objects/oEnemy/oEnemy.yy",},"propertyId":{"name":"sfx","path":"objects/oEnemy/oEnemy.yy",},"resource":{"name":"sfxBird","path":"sounds/sfxBird/sfxBird.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"sfxBird",},
   ],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Entities",
+    "path":"folders/Objects/Entities.yy",
   },
   "parentObjectId":{
     "name":"oEnemy",

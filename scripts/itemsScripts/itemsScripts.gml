@@ -20,15 +20,15 @@ function initializeLevel(_playerX, _playerY) {
 	
 	_positionsCaterpillar = addToPosition(_positionsCaterpillar, oLeaf, _numberLeaf, GameplayState.CATERPILLAR, LAYER_BONUS, sprite_get_width(sLeaf), sprite_get_height(sLeaf));
 	_positionsCaterpillar = addToPosition(_positionsCaterpillar, oLeafProtection, _numberLeafProtection, GameplayState.CATERPILLAR, LAYER_LEAF_PROTECTION, sprite_get_width(sLeafProtection), sprite_get_height(sLeafProtection));
-	_positionsCaterpillar = addToPosition(_positionsCaterpillar, oWasp, _numberWasp, GameplayState.CATERPILLAR, LAYER_ENEMY, sprite_get_width(sWaspIdle), sprite_get_height(sWaspIdle));
-	_positionsCaterpillar = addToPosition(_positionsCaterpillar, oBeetle, _numberBeetle, GameplayState.CATERPILLAR, LAYER_ENEMY, sprite_get_width(sBlackBeetleIdle), sprite_get_height(sBlackBeetleIdle));
+	_positionsCaterpillar = addToPosition(_positionsCaterpillar, oWasp, _numberWasp, GameplayState.CATERPILLAR, LAYER_ENEMY, sprite_get_width(sWaspIdle), sprite_get_height(sWaspIdle), true);
+	_positionsCaterpillar = addToPosition(_positionsCaterpillar, oBeetle, _numberBeetle, GameplayState.CATERPILLAR, LAYER_ENEMY, sprite_get_width(sBlackBeetleIdle), sprite_get_height(sBlackBeetleIdle), true);
 	
 	_positionsButterfly = addToPosition(_positionsButterfly, oFlower, _numberFlower, GameplayState.BUTTERFLY, LAYER_BONUS, 300, 300);
-	_positionsButterfly = addToPosition(_positionsButterfly, oFlowerSpider, _numberFlowerSpider, GameplayState.BUTTERFLY, LAYER_BONUS, 300, 300);
+	_positionsButterfly = addToPosition(_positionsButterfly, oFlowerSpider, _numberFlowerSpider, GameplayState.BUTTERFLY, LAYER_BONUS, 300, 300, true);
 	//for()
 }
 
-function createInstances(_gameplayState) {
+function createInstances(_gameplayState) {	
 	for(var _i = 0; _i < ds_list_size(global.levelItems); _i++) {
 		var _ref = ds_list_find_value(global.levelItems, _i);
 		if(_ref.state == _gameplayState) {
@@ -37,6 +37,7 @@ function createInstances(_gameplayState) {
 			//instance_deactivate_object(_instance);
 		}
 	}
+	
 }
 
 function spawnObjects(_x, _y, _viewportWidth, _viewportHeight, _playerState, _initial = false) {
@@ -95,46 +96,58 @@ function setupBirds(_gameplayState) {
 
 function cleanupPhaseObjects(_playerState) {
 	var _gameplayState = getGameplayState(_playerState);
-	switch(_gameplayState) {
-		case GameplayState.BUTTERFLY:
+	switch(_playerState) {
+		case PlayerState.BUTTERFLY_1:
 				instance_activate_object(oLeafProtection);					
 				instance_activate_object(oWasp);				
 				instance_activate_object(oBeetle);
 
 				instance_destroy(oLeafProtection);				
 				instance_destroy(oWasp);				
-				instance_destroy(oBeetle);					
+				instance_destroy(oBeetle);		
+				
+				createInstances(_gameplayState);
+				
 				break;
-		case GameplayState.CATERPILLAR:
-				// Nothing for the moment		
+		case PlayerState.CATERPILLAR:
+				createInstances(_gameplayState);
 				break;
-		case GameplayState.COCOON:
+		case PlayerState.COCOON:
 				instance_activate_object(oLeaf);				
 				
-				instance_destroy(oLeaf);				
+				instance_destroy(oLeaf);		
 			
+				createInstances(_gameplayState);
 				break;				
-		case GameplayState.EGGS:
+		case PlayerState.EGGS:
 				instance_activate_object(oFlower);
 				instance_activate_object(oFlowerSpider);
 				instance_activate_object(oButterflyReproduction);
 				instance_destroy(oFlower);
 				instance_destroy(oFlowerSpider);
 				instance_destroy(oButterflyReproduction);
+						
+				createInstances(_gameplayState);
 				break;				
 
 	}
 	
-	createInstances(_gameplayState);
+	
 
 }
 
 
-function addToPosition(_positions, _obj, _count, _state, _layer, _width, _height) {
+function addToPosition(_positions, _obj, _count, _state, _layer, _width, _height, _exclusion = false) {
 	
 	var _maxAttempts = 1000;
 	var _attempts = 0;
 	var _radius = max(_width * 0.5, _height * 0.5);
+	
+	var _exclusionX1 = 	oPlayer.x - (oPlayer.cameraWidth * 0.5);
+	var _exclusionX2 = 	oPlayer.x + (oPlayer.cameraWidth * 0.5);
+	var _exclusionY1 = 	oPlayer.y - (oPlayer.cameraHeight * 0.5);
+	var _exclusionY2 = 	oPlayer.y + (oPlayer.cameraHeight * 0.5);
+	//, cameraHeight, state, true);
 	
 	var _i = 0;
 	while(_i < _count && _attempts < _maxAttempts) {
@@ -154,6 +167,11 @@ function addToPosition(_positions, _obj, _count, _state, _layer, _width, _height
             }
 			
 			if(place_meeting(_posX, _posY, oPlayer.collisionMap)) {
+				_valid = false;
+                break;
+			}
+			
+			if(_exclusion && point_in_rectangle(_posX, _posY, _exclusionX1, _exclusionY1, _exclusionX2, _exclusionY2)) {
 				_valid = false;
                 break;
 			}

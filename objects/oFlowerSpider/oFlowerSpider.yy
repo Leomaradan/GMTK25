@@ -12,8 +12,8 @@
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oBonus","path":"objects/oBonus/oBonus.yy",},"propertyId":{"name":"spriteShadow","path":"objects/oBonus/oBonus.yy",},"resource":{"name":"sLargeShadow","path":"sprites/sLargeShadow/sLargeShadow.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"sLargeShadow",},
   ],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"GroundElements",
+    "path":"folders/Objects/GroundElements.yy",
   },
   "parentObjectId":{
     "name":"oBonus",
