@@ -1,13 +1,29 @@
-var _keyLeft = keyboard_check(vk_left) || keyboard_check(ord("A"));
-var _keyRight = keyboard_check(vk_right) || keyboard_check(ord("D"));
-var _keyUp = keyboard_check(vk_up) || keyboard_check(ord("W"));
-var _keyDown = keyboard_check(vk_down) || keyboard_check(ord("S"));
+var _keyLeft = InputCheck(INPUT_VERB.LEFT);
+var _keyRight = InputCheck(INPUT_VERB.RIGHT);
+var _keyUp = InputCheck(INPUT_VERB.UP);
+var _keyDown = InputCheck(INPUT_VERB.DOWN);
+
+var _mousePress = InputMouseCheck(mb_left);
 
 moving = false;
 
-inputDirection = point_direction(0, 0, _keyRight - _keyLeft, _keyDown - _keyUp);
-inputMagnitude = (_keyRight - _keyLeft != 0) || (_keyDown - _keyUp != 0);
+inputDirection = 0;
+inputMagnitude = 0;
 
+if(_keyDown || _keyUp || _keyLeft || _keyRight) {
+
+	inputDirection = point_direction(0, 0, _keyRight - _keyLeft, _keyDown - _keyUp);
+	inputMagnitude = (_keyRight - _keyLeft != 0) || (_keyDown - _keyUp != 0);
+
+} else if(_mousePress) {
+	var _pressedX = InputMouseGuiX();	
+	var _pressedY = InputMouseGuiY();	
+	
+	
+	inputDirection = point_direction(display_get_gui_width() * 0.5, display_get_gui_height()* 0.5, _pressedX, _pressedY);
+	inputMagnitude = 1;
+	
+}
 
 
 var hSpeed = lengthdir_x(inputMagnitude * spd, inputDirection);
